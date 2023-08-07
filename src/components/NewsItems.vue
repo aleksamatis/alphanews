@@ -8,7 +8,7 @@ const nav = ref();
 
 async function loadNews() {
   const page = nav.value ? nav.value.current + 1 : ""
-  const result = await fetch(`http://flems.github.io/test/api/news/${page}`, { credentials: "omit"});
+  const result = await fetch(`//flems.github.io/test/api/news/${page}`, { credentials: "omit"});
   const jsonData = await result.json()
   nav.value = jsonData.nav
 
